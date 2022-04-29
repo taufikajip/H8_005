@@ -4,7 +4,7 @@ function onClickedPredictPrice(){
     var surge_multiplier = document.getElementById('ui_surge_multiplier');
     var cab_name = document.getElementById('ui_cab_name');
     var predictPrice = document.getElementById('predictedPrice');
-    var url = "https://fp1-model-price-prediction.herokuapp.com/predict_price";
+    var url = "https://h8-ks05-fp1-kelompok01.herokuapp.com/predict_price";
 
     $.post(url,{
         distance:parseFloat(distance.value),
@@ -17,7 +17,7 @@ function onClickedPredictPrice(){
 }
 
 function onPageLoad(){
-    var url = "https://fp1-model-price-prediction.herokuapp.com/get_cab_names";
+    var url = "https://h8-ks05-fp1-kelompok01.herokuapp.com/get_cab_names";
     $.get(url, function(data, status){
         if(data){
             var cab_names = data.cab_names;
