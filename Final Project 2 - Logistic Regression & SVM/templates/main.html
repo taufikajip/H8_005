@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Weather Prediction</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css')}}" />
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}" />
+
+
+</head>
+
+<body>
+    <div class="img"></div>
+	<div id="prediction" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="predict-form">
+						<div class="form-header">
+							<h1>Weather Prediction</h1>
+						</div>
+						<form action="{{url_for('predict')}}" method="post">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">MaxTemp</span>
+										<input class="form-control" name="MaxTemp" type="text" placeholder="Enter MaxTemp Value">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">Sunshine</span>
+										<input class="form-control" name="Sunshine" type="text" placeholder="Enter Sunshine Value">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">WindGustSpeed</span>
+										<input class="form-control" name="WindGustSpeed" type="text" placeholder="Enter WindGustSpeed Value">
+									</div>
+								</div>
+							</div>
+                            <div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">Humidity9am</span>
+										<input class="form-control" name="Humidity9am" type="text" placeholder="Enter Humidity9am Value">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">Humidity3pm</span>
+										<input class="form-control" name="Humidity3pm" type="text" placeholder="Enter Humidity3pm Value">
+									</div>
+								</div>
+							</div>
+                            <div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">Pressure9am</span>
+										<input class="form-control" name="Pressure9am" type="text" placeholder="Enter Pressure9am Value">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">Pressure3pm</span>
+										<input class="form-control" name="Pressure3pm" type="text" placeholder="Enter Pressure3pm Value">
+									</div>
+								</div>
+							</div>
+                            <div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">Cloud9am</span>
+										<input class="form-control" name="Cloud9am" type="text" placeholder="Enter Cloud9am Value">
+									</div>
+								</div>
+                                <div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">Cloud3pm</span>
+										<input class="form-control" name="Cloud3pm" type="text" placeholder="Enter Cloud3pm Value">
+									</div>
+								</div>
+                            </div>
+                            <div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">Temp3pm</span>
+										<input class="form-control" name="Temp3pm" type="text" placeholder="Enter Temp3pm Value">
+									</div>
+								</div>
+                                <div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">RainToday</span>
+										<input class="form-control" name="RainToday" type="text" placeholder="Enter RainToday Value">
+									</div>
+								</div>
+                            </div>
+							<div class="form-btn">
+								<button class="submit-btn">Predict</button>
+							</div>
+                            <div class="form-btn">
+								<p class="message">{{prediction_text}}</p>
+							</div>
+						</form>
+                        
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
