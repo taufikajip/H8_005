@@ -1,3 +1,9 @@
+# Final Project 2 - Logistic Regression and SVM
+
+### Kelompok 01 - Introduction to Python for Data Science (Kampus Merdeka Batch 2)
+1. Taufik Aji Putra<br>
+2. M. Ihwanul Iqbal
+
 # Project Overview
 Dataset yang digunakan pada projek ini adalah dataset publik yang tersedia diwebsite kaggle, untuk mendapatkan dataset dapat ditemukan melalui link <a href="https://www.kaggle.com/jsphyg/weather-dataset-rattle-package"><b> klik disini</b></a>.  Dataset ini memiliki 23 atribut yang berisi informasi mengenai record 145460 data hujan harian selama 10 tahun di Australia. Tujuan utama dari penelitian ini adalah untuk memprediksi cuaca apakah hari selanjutnya hujan atau tidak dengan mengimplementasikan analisa prediction menggunakan algoritma Logistic Regression dan Support Vector Machine (SVM). Sebelum melakukan modeling perlu dilakukan processing data agar model prediksi yang dihasilkan memiliki tingkat akurasi yang optimal.
 
