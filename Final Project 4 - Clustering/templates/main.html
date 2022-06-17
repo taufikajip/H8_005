@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Customer Segmentation</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css')}}" />
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}" />
+
+
+</head>
+
+<body>
+    <div class="img"></div>
+	<div id="prediction" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="predict-form">
+						<div class="form-header">
+							<h1>Customer Segmentation</h1>
+						</div>
+						<form action="{{url_for('process')}}" method="post">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">BALANCE</span>
+										<input class="form-control" name="BALANCE" type="text" placeholder="Enter Value">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">BALANCE FREQUENCY</span>
+										<input class="form-control" name="BALANCE_FREQUENCY" type="text" placeholder="Enter Value">
+									</div>
+								</div>
+							</div>
+                            <div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">PURCHASES</span>
+										<input class="form-control" name="PURCHASES" type="text" placeholder="Enter Value">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">ONE-OFF PURCHASES</span>
+										<input class="form-control" name="ONEOFF_PURCHASES" type="text" placeholder="Enter Value">
+									</div>
+								</div>
+							</div>
+                            <div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">INSTALLMENTS PURCHASES</span>
+										<input class="form-control" name="INSTALLMENTS_PURCHASES" type="text" placeholder="Enter Value">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">CASH ADVANCE</span>
+										<input class="form-control" name="CASH_ADVANCE" type="text" placeholder="Enter Value">
+									</div>
+								</div>
+							</div>
+                            <div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">PURCHASES_FREQUENCY</span>
+										<input class="form-control" name="PURCHASES_FREQUENCY" type="text" placeholder="Enter Value">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">ONEOFF_PURCHASES_FREQUENCY</span>
+										<input class="form-control" name="ONEOFF_PURCHASES_FREQUENCY" type="text" placeholder="Enter Value">
+									</div>
+								</div>
+                            </div>
+                            <div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">PURCHASES INSTALLMENTS FREQUENCY</span>
+										<input class="form-control" name="PURCHASES_INSTALLMENTS_FREQUENCY" type="text" placeholder="Enter Value">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">CASH_ADVANCE_FREQUENCY</span>
+										<input class="form-control" name="CASH_ADVANCE_FREQUENCY" type="text" placeholder="Enter Value">
+									</div>
+								</div>
+                            </div>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">CASH ADVANCE TRX</span>
+										<input class="form-control" name="CASH_ADVANCE_TRX" type="text" placeholder="Enter Value">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">PURCHASES TRX</span>
+										<input class="form-control" name="PURCHASES_TRX" type="text" placeholder="Enter Value">
+									</div>
+								</div>
+                            </div>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">CREDIT LIMIT</span>
+										<input class="form-control" name="CREDIT_LIMIT" type="text" placeholder="Enter Value">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">PAYMENTS</span>
+										<input class="form-control" name="PAYMENTS" type="text" placeholder="Enter Value">
+									</div>
+								</div>
+                            </div>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">MINIMUM PAYMENTS</span>
+										<input class="form-control" name="MINIMUM_PAYMENTS" type="text" placeholder="Enter Value">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">PRC FULL PAYMENT</span>
+										<input class="form-control" name="PRC_FULL_PAYMENT" type="text" placeholder="Enter Value">
+									</div>
+								</div>
+                            </div>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<span class="form-label">TENURE</span>
+										<input class="form-control" name="TENURE" type="text" placeholder="Enter Value">
+									</div>
+								</div>
+                            </div>
+							<div class="form-btn">
+								<button class="submit-btn">Submit</button>
+							</div>
+                            <div class="form-btn">
+								<p class="message">Result : {{result_text}}</p>
+							</div>
+						</form>
+                        
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
