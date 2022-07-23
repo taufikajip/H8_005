@@ -32,3 +32,5 @@ Database ini memiliki 57 atribut. Final Project 1 ini dibuat guna mengevaluasi k
 - 11.... dan lainnya
 
 ##### Link dataset : <a href="https://www.kaggle.com/brllrb/uber-and-lyft-dataset-boston-ma"><b> disini</b></a>
+
+##### Link Heroku : https://h8-ks05-fp1-kelompok01.herokuapp.com/
