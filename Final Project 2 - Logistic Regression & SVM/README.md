@@ -5,14 +5,12 @@
 2. M. Ihwanul Iqbal
 
 # Project Overview
-Dataset yang digunakan pada projek ini adalah dataset publik yang tersedia diwebsite kaggle, untuk mendapatkan dataset dapat ditemukan melalui link <a href="https://www.kaggle.com/jsphyg/weather-dataset-rattle-package"><b> klik disini</b></a>.  Dataset ini memiliki 23 atribut yang berisi informasi mengenai record 145460 data hujan harian selama 10 tahun di Australia. Tujuan utama dari penelitian ini adalah untuk memprediksi cuaca apakah hari selanjutnya hujan atau tidak dengan mengimplementasikan analisa prediction menggunakan algoritma Logistic Regression dan Support Vector Machine (SVM). Sebelum melakukan modeling perlu dilakukan processing data agar model prediksi yang dihasilkan memiliki tingkat akurasi yang optimal.
+Dataset yang digunakan pada projek ini adalah dataset publik yang tersedia di website kaggle, untuk mendapatkan dataset dapat ditemukan melalui link <a href="https://www.kaggle.com/jsphyg/weather-dataset-rattle-package"><b> klik disini</b></a>.  Dataset ini memiliki 23 atribut yang berisi informasi mengenai record 145460 data hujan harian selama 10 tahun di Australia. Tujuan utama dari penelitian ini adalah untuk memprediksi cuaca apakah hari selanjutnya hujan atau tidak dengan mengimplementasikan analisa prediction menggunakan algoritma Logistic Regression dan Support Vector Machine (SVM). Sebelum melakukan modeling perlu dilakukan processing data agar model prediksi yang dihasilkan memiliki tingkat akurasi yang optimal.
 
 #### Final Project 2 ini dibuat guna mengevaluasi konsep Regression sebagai berikut:
 * Mampu memahami konsep Classification dengan Logistic Regression dan SVM
 * Mampu mempersiapkan data untuk digunakan dalam model  Logistic Regression dan SVM
 * Mampu mengimplementasikan  Logistic Regression dan SVM untuk membuat prediksi
-
-#### Link Heroku : https://h8-05-2-weather-predict.herokuapp.com/
 
 #### Attribute Information:
 - Date - tanggal hari itu
@@ -38,3 +36,5 @@ Dataset yang digunakan pada projek ini adalah dataset publik yang tersedia diweb
 - Temp3pm - temperatur jam 3 sore dalam celcius
 - RainToday - apakah hari ini hujan: jika curah hujan 24 jam sebelum jam 9 pagimelebihi 1mm, maka nilai ini adalah 1, jika tidak nilai nya 0
 - RainTomorrow - variable yang mau di prediksi
+
+#### Link Heroku : https://h8-05-2-weather-predict.herokuapp.com/
